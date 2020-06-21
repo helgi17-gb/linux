@@ -4,6 +4,9 @@
 
 ```sh
 ubuntu@ip-172-31-45-100:~$ vi hello.py
+```
+![screenshot1](pic1.png)
+```sh
 ubuntu@ip-172-31-45-100:~$ cat hello.py 
 print("Hello, world!")
 ubuntu@ip-172-31-45-100:~$ python3 hello.py 
@@ -24,6 +27,9 @@ ubuntu@ip-172-31-45-100:~$ wc -l hello.py
 
 ```sh
 ubuntu@ip-172-31-45-100:~$ vi linear_regression.py
+```
+![screenshot2](pic2.png)
+```sh
 ubuntu@ip-172-31-45-100:~$ cat linear_regression.py 
 print("Linear regression")
 ubuntu@ip-172-31-45-100:~$ python3 linear_regression.py 
