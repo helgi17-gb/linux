@@ -1,35 +1,3 @@
-## Урок 5
-
-### 1. Запустить htop и посмотреть, сколько процессоров и оперативной памяти есть на сервере.
-
-```sh
-ubuntu@ip-172-31-45-100:~$ apt policy htop
-htop:
-  Installed: 2.2.0-2build1
-  Candidate: 2.2.0-2build1
-  Version table:
- *** 2.2.0-2build1 500
-        500 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 Packages
-        100 /var/lib/dpkg/status
-```
-![](screenshot1.png)
-
-Процессоров: 1
-
-Оперативной памяти: 979M
-
-
-### 2. Найти все программы с расширением .py.
-
-```sh
-ubuntu@ip-172-31-45-100:~$ find / -type f -name '*.py' 2>/dev/null > py.files.lst
-$ scp -i ~/.ssh/aws_key.pem ubuntu@3.16.159.190:/home/ubuntu/py.files.lst ./
-py.files.lst                                  100%  629KB 432.6KB/s   00:01 
-```
-<details>
-    <summary>py.files.lst</summary>
-
-```
 /home/user_new/count10.py
 /home/ubuntu/hello.py
 /home/ubuntu/join.py
@@ -10656,32 +10624,3 @@ py.files.lst                                  100%  629KB 432.6KB/s   00:01
 /usr/share/python3/debpython/files.py
 /usr/share/python3/py3versions.py
 /etc/python3.8/sitecustomize.py
-```
-</details>
-
-![py.files.lst](py.files.lst)
-
-### 3. * Создать и запустить программу на Python, выводящую числа от 0 до 100 включительно.
-
-```sh
-ubuntu@ip-172-31-45-100:~$ vi count100.py
-ubuntu@ip-172-31-45-100:~$ cat count100.py 
-#!/usr/bin/python3
-
-from time import sleep
-
-for i in range(101):
-    print(i)
-    sleep(1)
-ubuntu@ip-172-31-45-100:~$ chmod u+x count100.py
-ubuntu@ip-172-31-45-100:~$ ./count100.py > /dev/null &
-[1] 1856
-```
-
-### Запустить htop во время выполнения программы и найти выполняемую программу в списке процессов, используя поиск по ключевому слову python (использовать средства поиска htop).
-
-```sh
-ubuntu@ip-172-31-45-100:~$ htop
-
-```
-![](screenshot2.png)
