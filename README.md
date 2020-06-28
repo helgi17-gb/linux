@@ -11,6 +11,7 @@ htop:
  *** 2.2.0-2build1 500
         500 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 Packages
         100 /var/lib/dpkg/status
+ubuntu@ip-172-31-45-100:~$ htop
 ```
 ![](screenshot1.png)
 
